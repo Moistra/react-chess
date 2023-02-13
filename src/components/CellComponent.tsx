@@ -16,7 +16,6 @@ function CellComponent({cell, selected, click}:ICellComponent) {
             selected? 'selected': '',
             cell.available && cell.figure ? 'killMove' : ''].join(' ')}
         onClick={()=> click(cell)}
-        //style ={{background: cell.available && cell.figure ? 'green' : ''}}
         >
             {cell.available && !cell.figure && <div className='available'/>}
             {cell.figure?.logo && <img src={cell.figure.logo}/>}
